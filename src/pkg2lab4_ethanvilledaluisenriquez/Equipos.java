@@ -15,6 +15,8 @@ public class Equipos
     private Date fecha_creación;
     private String color_p;
     private ArrayList<Jugadores> lista=new ArrayList();
+    private int contPat = 0;
+    private int contTir = 0;
 
     public Equipos() {
     }
@@ -30,6 +32,22 @@ public class Equipos
         this.color_p = color_p;
     }
 
+    public void addPat () {
+        contPat++;
+    }
+    
+    public void addTir () {
+        contTir++;
+    }
+    
+    public int getPat() {
+        return contPat;
+    }
+    
+    public int getTir() {
+        return contTir;
+    }
+    
     public ArrayList getLista(){
         return lista;
     }

@@ -79,24 +79,30 @@ public class Main {
             printArray(equipos);
             System.out.print("Opcion: "); int equipo = l.nextInt();
             
-            if (opcion == 1) {
+            if (opcion == 1 && equipos.get(equipo).getPat() < 3) {
                 System.out.println("Ingrese habilidad pateadora [1-100]: ");
                 int hab_pateadora=l.nextInt();
                 System.out.println("Ingrese habilidad pateadora [1-100]: ");
                 int fuerza=l.nextInt();
                 System.out.println("Ingrese habilidad pateadora [1-100]: ");
                 int hab_regateadora=l.nextInt();
+                equipos.get(equipo).addPat();
                 equipos.get(equipo).getLista().add(new Pateadores(hab_pateadora, fuerza, hab_regateadora, nombre, aka, num_camiseta, lF, lB, lJ, may, ano, stars));
-            }else{
+                System.out.println("Agregado exitosamente! ");
+            }
+            
+            if (opcion == 2 && equipos.get(equipo).getPat() < 2) {
                 System.out.println("Ingrese tiro de 3 puntos [1-100]: ");
                 int tiro3=l.nextInt();
                 System.out.println("Ingrese tiro de 2 puntos [1-100]: ");
                 int tiro2=l.nextInt();
                 System.out.println("Ingrese manejo del balon [1-100]: ");
                 int man_balon=l.nextInt();
+                equipos.get(equipo).addTir();
                 equipos.get(equipo).getLista().add(new Tiradores(tiro3, tiro2, man_balon, nombre, aka, num_camiseta, lF, lB, lJ, may, ano, stars));
+                System.out.println("Agregado exitosamente! ");
             }
-            System.out.println("Agregado exitosamente! ");
+            
         }
         
         

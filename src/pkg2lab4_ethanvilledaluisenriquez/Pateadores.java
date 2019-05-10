@@ -14,7 +14,7 @@ public class Pateadores extends Jugadores
         super(nombre, Apodo, num_camiseta, equipo_fut_fav, equipo_bal_fav, jugador_fav, mayorono, anio_nacimiento, n_estrellas);
         this.hab_pateadora = hab_pateadora;
         this.fuerza = fuerza;
-        this.hab_regateadora = hab_regateadora;
+        setHab_pateadora(hab_pateadora);
     }
 
     public int getHab_pateadora() {
@@ -22,7 +22,8 @@ public class Pateadores extends Jugadores
     }
 
     public void setHab_pateadora(int hab_pateadora) {
-        this.hab_pateadora = hab_pateadora;
+        if (hab_pateadora < 1 || hab_pateadora > 100)
+            this.hab_pateadora = hab_pateadora;
     }
 
     public int getFuerza() {

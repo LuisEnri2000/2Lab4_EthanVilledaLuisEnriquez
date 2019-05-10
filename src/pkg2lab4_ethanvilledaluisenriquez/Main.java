@@ -131,33 +131,71 @@ public class Main {
             int juga=l.nextInt();
             if (((Jugadores)equipos.get(equi).getLista().get(juga)) instanceof Pateadores)
             {
-                System.out.print("Ingrese nuevo nombre: "); String nombre=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setNombre(nombre);
-                System.out.print("Ingrese nuevo apodo: "); String aka=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setApodo(aka);
-                System.out.print("Ingrese nuevo numero de camiseta: "); int num=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setNum_camiseta(num);
-                System.out.print("Ingrese nuevo equipo de futbol favorito: "); String eff=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setEquipo_fut_fav(eff);
-                System.out.print("Ingrese nuevo equipo de baloncesto favorito: "); String efb=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setEquipo_bal_fav(efb);
-                System.out.print("Ingrese nuevo jugador favorito: "); String jf=l.next();((Jugadores)equipos.get(equi).getLista().get(juga)).setJugador_fav(jf);
-                System.out.print("1. Mayor\n2. Menor\nEs mayor o menor?"); int mom=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setMayorono(mom);
-                System.out.print("Ingrese nuevo anio de nacimiento: "); int anio=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setAnio_nacimiento(anio);
-                System.out.print("Ingrese nuevo numero de estrellas: "); int stars=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setN_estrellas(stars);
-                System.out.print("Ingrese nueva habilidad pateadora: "); int HP=l.nextInt(); ((Pateadores)equipos.get(equi).getLista().get(juga)).setHab_pateadora(HP);
-                System.out.print("Ingrese nueva fuerza: "); int Fuerza=l.nextInt(); ((Pateadores)equipos.get(equi).getLista().get(juga)).setFuerza(Fuerza);
-                System.out.print("Ingrese nueva habilidad regateadora: "); int hr=l.nextInt(); ((Pateadores)equipos.get(equi).getLista().get(juga)).setHab_regateadora(hr);
+                System.out.print("1. Editar nombre\n2. Editar apodo\n3.Editar numero de camiseta\n4. Editar equipo de futbol favorito\n"
+                        + "5. Editar equipo de baloncesto favorito\n6. Editar Jugador favorito\n7. Editar mayo/menor\n8. Editar anio de nacimiento\n"
+                        + "9. Editar numero de estrellas\n10. Editar habilidad pateadora\n11. Editar fuerza\n12. Editar habilidad regateadora\n"
+                        + "Que desea ingresar?[1-12]: "); int opcedit=l.nextInt();
+                switch(opcedit)
+                {
+                    case 1: System.out.print("Ingrese nuevo nombre: "); String nombre=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setNombre(nombre);
+                        break;
+                    case 2: System.out.print("Ingrese nuevo apodo: "); String aka=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setApodo(aka);
+                        break;
+                    case 3: System.out.print("Ingrese nuevo numero de camiseta: "); int num=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setNum_camiseta(num);
+                        break;
+                    case 4: System.out.print("Ingrese nuevo equipo de futbol favorito: "); String eff=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setEquipo_fut_fav(eff);
+                        break;
+                    case 5: System.out.print("Ingrese nuevo equipo de baloncesto favorito: "); String efb=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setEquipo_bal_fav(efb);
+                        break;
+                    case 6: System.out.print("Ingrese nuevo jugador favorito: "); String jf=l.next();((Jugadores)equipos.get(equi).getLista().get(juga)).setJugador_fav(jf);
+                        break;
+                    case 7: System.out.print("1. Mayor\n2. Menor\nEs mayor o menor?"); int mom=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setMayorono(mom);
+                        break;
+                    case 8: System.out.print("Ingrese nuevo anio de nacimiento: "); int anio=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setAnio_nacimiento(anio);
+                        break;
+                    case 9: System.out.print("Ingrese nuevo numero de estrellas: "); int stars=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setN_estrellas(stars);
+                        break;
+                    case 10: System.out.print("Ingrese nueva habilidad pateadora: "); int HP=l.nextInt(); ((Pateadores)equipos.get(equi).getLista().get(juga)).setHab_pateadora(HP);
+                        break;
+                    case 11:System.out.print("Ingrese nueva fuerza: "); int Fuerza=l.nextInt(); ((Pateadores)equipos.get(equi).getLista().get(juga)).setFuerza(Fuerza);
+                        break;
+                    case 12: System.out.print("Ingrese nueva habilidad regateadora: "); int hr=l.nextInt(); ((Pateadores)equipos.get(equi).getLista().get(juga)).setHab_regateadora(hr);
+                        break;
+                }
             }
             else
             {
-                System.out.print("Ingrese nuevo nombre: "); String nombre=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setNombre(nombre);
-                System.out.print("Ingrese nuevo apodo: "); String aka=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setApodo(aka);
-                System.out.print("Ingrese nuevo numero de camiseta: "); int num=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setNum_camiseta(num);
-                System.out.print("Ingrese nuevo equipo de futbol favorito: "); String eff=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setEquipo_fut_fav(eff);
-                System.out.print("Ingrese nuevo equipo de baloncesto favorito: "); String efb=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setEquipo_bal_fav(efb);
-                System.out.print("Ingrese nuevo jugador favorito: "); String jf=l.next();((Jugadores)equipos.get(equi).getLista().get(juga)).setJugador_fav(jf);
-                System.out.print("1. Mayor\n2. Menor\nEs mayor o menor?"); int mom=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setMayorono(mom);
-                System.out.print("Ingrese nuevo anio de nacimiento: "); int anio=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setAnio_nacimiento(anio);
-                System.out.print("Ingrese nuevo numero de estrellas: "); int stars=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setN_estrellas(stars);
-                System.out.print("Ingrese nuevo tiro de 3 puntos: "); int t3=l.nextInt(); ((Tiradores)equipos.get(equi).getLista().get(juga)).setTiro_de3(t3);
-                System.out.print("Ingrese nuevo tiro de 2 puntos: "); int t2=l.nextInt(); ((Tiradores)equipos.get(equi).getLista().get(juga)).setTiro_de2(t2);
-                System.out.print("Ingrese nuevo manejo del balon: "); int MB=l.nextInt(); ((Tiradores)equipos.get(equi).getLista().get(juga)).setManejo_balon(anio);
+                System.out.print("1. Editar nombre\n2. Editar apodo\n3.Editar numero de camiseta\n4. Editar equipo de futbol favorito\n"
+                        + "5. Editar equipo de baloncesto favorito\n6. Editar Jugador favorito\n7. Editar mayo/menor\n8. Editar anio de nacimiento\n"
+                        + "9. Editar numero de estrellas\n10. Editar habilidad pateadora\n11. Editar fuerza\n12. Editar habilidad regateadora\n"
+                        + "Que desea ingresar?[1-12]: "); int opcedit=l.nextInt();
+                switch(opcedit)
+                {
+                    case 1: System.out.print("Ingrese nuevo nombre: "); String nombre=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setNombre(nombre);
+                        break;
+                    case 2: System.out.print("Ingrese nuevo apodo: "); String aka=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setApodo(aka);
+                        break;
+                    case 3: System.out.print("Ingrese nuevo numero de camiseta: "); int num=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setNum_camiseta(num);
+                        break;
+                    case 4: System.out.print("Ingrese nuevo equipo de futbol favorito: "); String eff=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setEquipo_fut_fav(eff);
+                        break;
+                    case 5: System.out.print("Ingrese nuevo equipo de baloncesto favorito: "); String efb=l.next(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setEquipo_bal_fav(efb);
+                        break;
+                    case 6: System.out.print("Ingrese nuevo jugador favorito: "); String jf=l.next();((Jugadores)equipos.get(equi).getLista().get(juga)).setJugador_fav(jf);
+                        break;
+                    case 7: System.out.print("1. Mayor\n2. Menor\nEs mayor o menor?"); int mom=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setMayorono(mom);
+                        break;
+                    case 8: System.out.print("Ingrese nuevo anio de nacimiento: "); int anio=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setAnio_nacimiento(anio);
+                        break;
+                    case 9: System.out.print("Ingrese nuevo numero de estrellas: "); int stars=l.nextInt(); ((Jugadores)equipos.get(equi).getLista().get(juga)).setN_estrellas(stars);
+                        break;
+                    case 10: System.out.print("Ingrese nuevo tiro de 3 puntos: "); int t3=l.nextInt(); ((Tiradores)equipos.get(equi).getLista().get(juga)).setTiro_de3(t3);
+                        break;
+                    case 11:System.out.print("Ingrese nuevo tiro de 2 puntos: "); int t2=l.nextInt(); ((Tiradores)equipos.get(equi).getLista().get(juga)).setTiro_de2(t2);
+                        break;
+                    case 12: System.out.print("Ingrese nuevo manejo del balon: "); int MB=l.nextInt(); ((Tiradores)equipos.get(equi).getLista().get(juga)).setManejo_balon(MB);
+                        break;
+                }
             }
         }
         

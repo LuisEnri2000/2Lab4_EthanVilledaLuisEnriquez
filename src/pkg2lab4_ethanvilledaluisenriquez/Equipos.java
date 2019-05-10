@@ -1,6 +1,7 @@
 package pkg2lab4_ethanvilledaluisenriquez;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Equipos 
@@ -13,6 +14,7 @@ public class Equipos
     private String n_mascota;
     private Date fecha_creación;
     private String color_p;
+    private ArrayList<Jugadores> lista=new ArrayList();
 
     public Equipos() {
     }
@@ -28,6 +30,10 @@ public class Equipos
         this.color_p = color_p;
     }
 
+    public ArrayList getLista(){
+        return lista;
+    }
+    
     public String getNombre() {
         return nombre;
     }

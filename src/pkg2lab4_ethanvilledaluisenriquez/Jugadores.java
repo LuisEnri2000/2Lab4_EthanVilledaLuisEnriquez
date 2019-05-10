@@ -106,6 +106,10 @@ public class Jugadores {
     public void setN_estrellas(int n_estrellas) {
         this.n_estrellas = n_estrellas;
     }
+    
+    public double getProb () {
+        return 0;
+    }
 
     @Override
     public String toString() {

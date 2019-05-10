@@ -47,8 +47,9 @@ public class Pateadores extends Jugadores
         return "Pateadores{" + "hab_pateadora=" + hab_pateadora + ", fuerza=" + fuerza + ", hab_regateadora=" + hab_regateadora + '}';
     }
     
-    public double getProbabilidad()
-    {
+    @Override
+    public double getProb () {
+    
         return (hab_pateadora+fuerza+hab_regateadora)*0.65*(super.n_estrellas/10);
     }
 }

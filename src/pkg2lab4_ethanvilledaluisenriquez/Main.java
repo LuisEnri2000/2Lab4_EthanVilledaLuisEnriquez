@@ -81,11 +81,13 @@ public class Main {
             System.out.print("Opcion: "); int equipo = l.nextInt();
             
             if (opcion == 1) {
-                
+                // LEER, PUTA! (Lesen Sie, Hundin)
+                equipos.get(equipo).getLista().add(new Pateadores());
             }else{
-                
+                // LEER, PUTA! (Lesen Sie, Hundin)
+                equipos.get(equipo).getLista().add(new Tiradores());
             }
-            
+            System.out.println("Agregado exitosamente! ");
         }
         
         

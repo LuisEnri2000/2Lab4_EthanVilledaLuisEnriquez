@@ -6,14 +6,14 @@ public class Jugadores {
     private String equipo_fut_fav;
     private String equipo_bal_fav;
     private String jugador_fav;
-    private boolean mayorono;
+    private int mayorono;
     private int anio_nacimiento;
     private int n_estrellas;
 
     public Jugadores() {
     }
 
-    public Jugadores(String nombre, String Apodo, int num_camiseta, String equipo_fut_fav, String equipo_bal_fav, String jugador_fav, boolean mayorono, int anio_nacimiento, int n_estrellas) {
+    public Jugadores(String nombre, String Apodo, int num_camiseta, String equipo_fut_fav, String equipo_bal_fav, String jugador_fav, int mayorono, int anio_nacimiento, int n_estrellas) {
         this.nombre = nombre;
         this.Apodo = Apodo;
         this.num_camiseta = num_camiseta;
@@ -73,11 +73,11 @@ public class Jugadores {
         this.jugador_fav = jugador_fav;
     }
 
-    public boolean isMayorono() {
+    public int isMayorono() {
         return mayorono;
     }
 
-    public void setMayorono(boolean mayorono) {
+    public void setMayorono(int mayorono) {
         this.mayorono = mayorono;
     }
 

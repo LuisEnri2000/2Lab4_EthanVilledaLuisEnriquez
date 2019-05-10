@@ -10,7 +10,7 @@ public class Pateadores extends Jugadores
         super();
     }
 
-    public Pateadores(int hab_pateadora, int fuerza, int hab_regateadora, String nombre, String Apodo, int num_camiseta, String equipo_fut_fav, String equipo_bal_fav, String jugador_fav, boolean mayorono, int anio_nacimiento, int n_estrellas) {
+    public Pateadores(int hab_pateadora, int fuerza, int hab_regateadora, String nombre, String Apodo, int num_camiseta, String equipo_fut_fav, String equipo_bal_fav, String jugador_fav, int mayorono, int anio_nacimiento, int n_estrellas) {
         super(nombre, Apodo, num_camiseta, equipo_fut_fav, equipo_bal_fav, jugador_fav, mayorono, anio_nacimiento, n_estrellas);
         this.hab_pateadora = hab_pateadora;
         this.fuerza = fuerza;

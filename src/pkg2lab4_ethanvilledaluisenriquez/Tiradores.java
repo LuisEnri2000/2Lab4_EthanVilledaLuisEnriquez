@@ -9,7 +9,7 @@ public class Tiradores extends Jugadores
         super();
     }
 
-    public Tiradores(int tiro_de3, int tiro_de2, int manejo_balon, String nombre, String Apodo, int num_camiseta, String equipo_fut_fav, String equipo_bal_fav, String jugador_fav, boolean mayorono, int anio_nacimiento, int n_estrellas) {
+    public Tiradores(int tiro_de3, int tiro_de2, int manejo_balon, String nombre, String Apodo, int num_camiseta, String equipo_fut_fav, String equipo_bal_fav, String jugador_fav, int mayorono, int anio_nacimiento, int n_estrellas) {
         super(nombre, Apodo, num_camiseta, equipo_fut_fav, equipo_bal_fav, jugador_fav, mayorono, anio_nacimiento, n_estrellas);
         this.tiro_de3 = tiro_de3;
         this.tiro_de2 = tiro_de2;

@@ -56,12 +56,11 @@ public class Main {
             System.out.println("Agregar jugador! :D");
             System.out.print("Nombre: "); String nombre = l.next();
             System.out.print("Apodo: "); String aka = l.next();
+            System.out.print("Numero de camisata: "); int num_camiseta=l.nextInt();
             System.out.print("Equipo de futbol favorito: "); String lF = l.next();
             System.out.print("Equipo de baloncesto favorito: "); String lB = l.next();
             System.out.print("Jugador favorito: "); String lJ = l.next();
             System.out.print("Mayor de edad (1. Si 2. No): "); int may = l.nextInt();
-            Boolean mayor = false;
-            if (may == 1) mayor = true; 
             System.out.print("Año de Nacimiento: "); int ano = l.nextInt();
             int stars = 0;
             do {
@@ -81,11 +80,21 @@ public class Main {
             System.out.print("Opcion: "); int equipo = l.nextInt();
             
             if (opcion == 1) {
-                // LEER, PUTA! (Lesen Sie, Hundin)
-                equipos.get(equipo).getLista().add(new Pateadores());
+                System.out.println("Ingrese habilidad pateadora [1-100]: ");
+                int hab_pateadora=l.nextInt();
+                System.out.println("Ingrese habilidad pateadora [1-100]: ");
+                int fuerza=l.nextInt();
+                System.out.println("Ingrese habilidad pateadora [1-100]: ");
+                int hab_regateadora=l.nextInt();
+                equipos.get(equipo).getLista().add(new Pateadores(hab_pateadora, fuerza, hab_regateadora, nombre, aka, num_camiseta, lF, lB, lJ, may, ano, stars));
             }else{
-                // LEER, PUTA! (Lesen Sie, Hundin)
-                equipos.get(equipo).getLista().add(new Tiradores());
+                System.out.println("Ingrese tiro de 3 puntos [1-100]: ");
+                int tiro3=l.nextInt();
+                System.out.println("Ingrese tiro de 2 puntos [1-100]: ");
+                int tiro2=l.nextInt();
+                System.out.println("Ingrese manejo del balon [1-100]: ");
+                int man_balon=l.nextInt();
+                equipos.get(equipo).getLista().add(new Tiradores(tiro3, tiro2, man_balon, nombre, aka, num_camiseta, lF, lB, lJ, may, ano, stars));
             }
             System.out.println("Agregado exitosamente! ");
         }

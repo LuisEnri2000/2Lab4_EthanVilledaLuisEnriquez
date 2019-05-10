@@ -7,8 +7,9 @@ public class Jugadores {
     private String equipo_bal_fav;
     private String jugador_fav;
     private int mayorono;
+    String mom;
     private int anio_nacimiento;
-    private int n_estrellas;
+    protected int n_estrellas;
 
     public Jugadores() {
     }
@@ -23,6 +24,7 @@ public class Jugadores {
         this.mayorono = mayorono;
         this.anio_nacimiento = anio_nacimiento;
         this.n_estrellas = n_estrellas;
+        setMayorono(mayorono);
     }
 
     public String getNombre() {
@@ -79,6 +81,14 @@ public class Jugadores {
 
     public void setMayorono(int mayorono) {
         this.mayorono = mayorono;
+        if (mayorono==1)
+        {
+            mom="Mayor";
+        }
+        else
+        {
+            mom="Menor";
+        }
     }
 
     public int getAnio_nacimiento() {
@@ -99,7 +109,7 @@ public class Jugadores {
 
     @Override
     public String toString() {
-        return "Jugadores{" + "nombre=" + nombre + ", Apodo=" + Apodo + ", num_camiseta=" + num_camiseta + ", equipo_fut_fav=" + equipo_fut_fav + ", equipo_bal_fav=" + equipo_bal_fav + ", jugador_fav=" + jugador_fav + ", mayorono=" + mayorono + ", anio_nacimiento=" + anio_nacimiento + ", n_estrellas=" + n_estrellas + '}';
+        return "Jugadores{" + "nombre=" + nombre + ", Apodo=" + Apodo + ", num_camiseta=" + num_camiseta + ", equipo_fut_fav=" + equipo_fut_fav + ", equipo_bal_fav=" + equipo_bal_fav + ", jugador_fav=" + jugador_fav + ", mayorono=" + mom + ", anio_nacimiento=" + anio_nacimiento + ", n_estrellas=" + n_estrellas + '}';
     }
     
     

@@ -45,5 +45,13 @@ public class Tiradores extends Jugadores
         return "Tiradores{" + "tiro_de3=" + tiro_de3 + ", tiro_de2=" + tiro_de2 + ", manejo_balon=" + manejo_balon + '}';
     }
     
+    public double getProbTiro3()
+    {
+        return (tiro_de3+manejo_balon)*0.90*(super.n_estrellas/10);
+    }
     
+    public double getProbTiro2()
+    {
+        return (tiro_de2+manejo_balon)*0.95*(super.n_estrellas/10);
+    }
 }

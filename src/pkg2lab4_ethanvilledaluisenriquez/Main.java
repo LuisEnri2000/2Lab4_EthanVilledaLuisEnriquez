@@ -25,9 +25,14 @@ public class Main {
         equipos.get(0).getLista().add(new Pateadores(100, 100, 100, "Ethan1", "", 1, "", "", "", 1, 2001, 5));
         equipos.get(0).getLista().add(new Pateadores(100, 100, 100, "Ethan2", "", 1, "", "", "", 1, 2001, 5));
         equipos.get(0).getLista().add(new Pateadores(100, 100, 100, "Ethan3", "", 1, "", "", "", 1, 2001, 5));
-        equipos.get(1).getLista().add(new Pateadores(100, 100, 100, "Ethan1", "", 1, "", "", "", 1, 2001, 5));
-        equipos.get(1).getLista().add(new Pateadores(100, 100, 100, "Ethan2", "", 1, "", "", "", 1, 2001, 5));
-        equipos.get(1).getLista().add(new Pateadores(100, 100, 100, "Ethan3", "", 1, "", "", "", 1, 2001, 5));
+        equipos.get(0).getLista().add(new Tiradores(100, 100, 100, "Ethan4", "", 1, "", "", "", 1, 2001, 5));
+        equipos.get(0).getLista().add(new Tiradores(100, 100, 100, "Ethan5", "", 1, "", "", "", 1, 2001, 5));
+        
+        equipos.get(1).getLista().add(new Pateadores(100, 100, 100, "Luis1", "", 1, "", "", "", 1, 2001, 5));
+        equipos.get(1).getLista().add(new Pateadores(100, 100, 100, "Luis Segundo", "", 1, "", "", "", 1, 2001, 5));
+        equipos.get(1).getLista().add(new Pateadores(100, 100, 100, "Luis Tercero", "", 1, "", "", "", 1, 2001, 5));
+        equipos.get(1).getLista().add(new Tiradores(100, 100, 100, "Ethan Cuarto", "", 1, "", "", "", 1, 2001, 5));
+        equipos.get(1).getLista().add(new Tiradores(100, 100, 100, "Ethan Luis", "", 1, "", "", "", 1, 2001, 5));
         int men = 0;
         
         
@@ -291,10 +296,15 @@ public class Main {
                                     }
 
                                 }   
-
-                                System.out.print("Ingrese el jugador: ");
-                                juga=l.nextInt();
-                                contPases ++;
+                                int NOVOjuga = 0;
+                                do{
+                                    System.out.print("Ingrese el jugador a pasar: ");
+                                    NOVOjuga=l.nextInt();
+                                    contPases ++;
+                                } while (NOVOjuga == juga);
+                                juga = NOVOjuga;
+                                
+                                System.out.println("Pase exitoso!");
                             }
 
                             if (subop == 2) {
